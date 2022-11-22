@@ -7,6 +7,7 @@
 	<link rel="preload" href="/fonts/matrix-b.ttf" as="font" type="font/ttf" crossorigin="anonymous" as='font'>
 	<link rel="preload" href="/fonts/mplantin.ttf" as="font" type="font/ttf" crossorigin="anonymous" as='font'>
 	<link rel="preload" href="/fonts/mplantin-i.ttf" as="font" type="font/ttf" crossorigin="anonymous" as='font'>
+	
 	<div class='main-content'>
 		<!-- Popups -->
 		<div id='frame-element-editor' class='frame-element-editor'>
@@ -136,7 +137,7 @@
 							</div>
 							<div class='input-grid margin-bottom'>
 								<button id='loadFrameVersion' class='input'>Load Frame Version</button>
-								<button id='loadWideFrame' class='input' onclick='loadMarginVersion()'>Load Margin</button>
+								<button id='loadWideFrame' class='input' onclick='loadScript("/js/frames/groupMargin.js"); loadMarginVersion()'>Load Margin</button>
 							</div>
 							<h5 class='input-description margin-bottom'>Automatically load Frame Version when loading Frame Packs</h5>
 							<label class='checkbox-container input'>Auto load
