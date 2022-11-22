@@ -104,7 +104,7 @@
 					<h3 class='selectable readable-background' onclick='toggleCreatorTabs(event, "watermark")'>Watermark</h3>
 					<h3 class='selectable readable-background' onclick='toggleCreatorTabs(event, "bottomInfo")'>Collector</h3>
 					<h3 class='selectable readable-background' onclick='toggleCreatorTabs(event, "import")'>Import/Save</h3>
-					<h3 class='selectable readable-background' onclick='toggleCreatorTabs(event, "tutorial"); loadTutorialVideo();'>Tutorial</h3>
+					<!-- <h3 class='selectable readable-background' onclick='toggleCreatorTabs(event, "tutorial"); loadTutorialVideo();'>Tutorial</h3> -->
 				</div>
 				<div id='creator-menu-sections' class='margin-bottom'>
 					<div id='creator-menu-frame'>
@@ -139,7 +139,7 @@
 							</div>
 							<h5 class='input-description margin-bottom'>Automatically load Frame Version when loading Frame Packs</h5>
 							<label class='checkbox-container input'>Auto load
-								<input id='autoLoadFrameVersion' type='checkbox' onchange='autoLoadFrameVersion();' checked>
+								<input id='autoLoadFrameVersion' type='checkbox' onchange='autoLoadFrameVersion();' checked="false">
 								<span class='checkmark'></span>
 							</label>
 						</div>
@@ -193,7 +193,7 @@
 							</label>
 							<h5 class='input-description margin-bottom'>Highlight transparencies in card</h5>
 							<label class='checkbox-container input'>Transparencies
-								<input id='highlight-transparencies' type='checkbox' onchange='toggleCardBackgroundColor(this.checked);'>
+								<input id='highlight-transparencies' checked="true" type='checkbox' onchange='toggleCardBackgroundColor(this.checked);'>
 								<span class='checkmark'></span>
 							</label>
 						</div>
