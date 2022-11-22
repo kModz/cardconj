@@ -136,6 +136,7 @@
 							</div>
 							<div class='input-grid margin-bottom'>
 								<button id='loadFrameVersion' class='input'>Load Frame Version</button>
+								<button id='loadWideFrame' class='input' onclick='loadMarginVersion()'>Load Margin</button>
 							</div>
 							<h5 class='input-description margin-bottom'>Automatically load Frame Version when loading Frame Packs</h5>
 							<label class='checkbox-container input'>Auto load
@@ -193,7 +194,7 @@
 							</label>
 							<h5 class='input-description margin-bottom'>Highlight transparencies in card</h5>
 							<label class='checkbox-container input'>Transparencies
-								<input id='highlight-transparencies' checked="true" type='checkbox' onchange='toggleCardBackgroundColor(this.checked);'>
+								<input id='highlight-transparencies' type='checkbox' onchange='toggleCardBackgroundColor(this.checked);'>
 								<span class='checkmark'></span>
 							</label>
 						</div>
