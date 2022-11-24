@@ -1,6 +1,4 @@
 # Card Conjurer
-<<<<<<< HEAD
-=======
 Card Conjurer was created by a passionate Magic the Gathering player and grew to become probably the most popular online card generator known to the game.
 In November of 2022, Wizards of the Coast served the original creator and webhost of the site with Ceas and Desist paperwork, forcing the site offline.
 This repository is for the purpose of making the application usable on your local machine and maintaining templates in perpetuity.
@@ -12,4 +10,3 @@ This repository is for the purpose of making the application usable on your loca
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?longCache=true&style=popout)](https://www.paypal.me/kyleburtondonate
 ) ← Help out Card Conjurer's original creator, Kyle. We love you buddy.
->>>>>>> 525fa14c89ec7e6a49cd61a9db5ee20c9f1d838a
