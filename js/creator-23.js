@@ -887,12 +887,12 @@ function writeText(textObject, targetContext) {
 	//Preps the text string
 	var splitString = '6GJt7eL8';
 	var rawText = textObject.text
-	//if ((textObject.name == 'wizards' || textObject.name == 'copyright') && params.get('copyright') != null && (params.get('copyright') != '' || card.margins)) {
-	//	rawText = params.get('copyright'); //so people using CC for custom card games without WotC's IP can customize their copyright info
-	//	if (rawText == 'none') { rawText = ''; }
-	//}
-	if (rawText.toLowerCase().includes('{cardname}')) {
-		rawText = rawText.replace(/{cardname}/ig, getCardName());
+	if ((textObject.name == 'wizards' || textObject.name == 'copyright') && params.get('copyright') != null && (params.get('copyright') != '' || card.margins)) {
+		rawText = params.get('copyright'); //so people using CC for custom card games without WotC's IP can customize their copyright info
+		if (rawText == 'none') { rawText = ''; }
+	}
+	if (rawText.toLowerCase().includes('{cardname}' || '~')) {
+		rawText = rawText.replace(/{cardname}|~/ig, getCardName());
 	}
 	if (document.querySelector('#info-artist').value == '') {
 		rawText = rawText.replace('\uFFEE{elemidinfo-artist}', '');
@@ -2190,7 +2190,10 @@ function setRoundedCorners(value) {
 //Various loaders
 function imageURL(url, destination, otherParams) {
 	var imageurl = url;
-	if (params.get('noproxy') != '') {
+	// If an image URL does not have HTTP in it, assume it's a local file in the repo local_art directory.
+	if (!url.includes('http')) {
+		imageurl = '/local_art/' + url;
+	} else if (params.get('noproxy') != '') {
 		//CORS PROXY LINKS
 		//Previously: https://cors.bridged.cc/
 		imageurl = 'https://api.codetabs.com/v1/proxy?quest=' + url;
