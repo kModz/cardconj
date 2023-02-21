@@ -2193,7 +2193,7 @@ function imageURL(url, destination, otherParams) {
 	if (params.get('noproxy') != '') {
 		//CORS PROXY LINKS
 		//Previously: https://cors.bridged.cc/
-		imageurl = 'https://api.codetabs.com/v1/proxy?quest=' + url;
+		imageurl = 'https://corsproxy.io/?' + url;
 	}
 	destination(imageurl, otherParams);
 }
