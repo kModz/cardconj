@@ -12,6 +12,12 @@ availableFrames = [
 	{name:'Multicolored Frame', src:'/img/frames/m15/ub/regular/m.png', masks:masks},
 	{name:'Artifact Frame', src:'/img/frames/m15/ub/regular/a.png', masks:masks},
 	{name:'Land Frame', src:'/img/frames/m15/ub/regular/l.png', masks:masks},
+	{name:'White Land Frame', src:'/img/frames/m15/ub/regular/wl.png', masks:masks},
+	{name:'Blue Land Frame', src:'/img/frames/m15/ub/regular/ul.png', masks:masks},
+	{name:'Black Land Frame', src:'/img/frames/m15/ub/regular/bl.png', masks:masks},
+	{name:'Red Land Frame', src:'/img/frames/m15/ub/regular/rl.png', masks:masks},
+	{name:'Green Land Frame', src:'/img/frames/m15/ub/regular/gl.png', masks:masks},
+	{name:'Multicolored Land Frame', src:'/img/frames/m15/ub/regular/ml.png', masks:masks},
 	{name:'White Power/Toughness', src:'/img/frames/m15/regular/m15PTW.png', bounds:bounds},
 	{name:'Blue Power/Toughness', src:'/img/frames/m15/regular/m15PTU.png', bounds:bounds},
 	{name:'Black Power/Toughness', src:'/img/frames/m15/regular/m15PTB.png', bounds:bounds},
@@ -27,7 +33,9 @@ availableFrames = [
 	{name:'Green Holo Stamp', src:'/img/frames/m15/ub/regular/stamp/g.png', bounds:bounds2},
 	{name:'Multicolored Holo Stamp', src:'/img/frames/m15/ub/regular/stamp/m.png', bounds:bounds2},
 	{name:'Artifact Holo Stamp', src:'/img/frames/m15/ub/regular/stamp/a.png', bounds:bounds2},
-	{name:'Land Holo Stamp', src:'/img/frames/m15/ub/regular/stamp/l.png', bounds:bounds2}
+	{name:'Land Holo Stamp', src:'/img/frames/m15/ub/regular/stamp/l.png', bounds:bounds2},
+	{name:'Gray Holo Stamp', src:'/img/frames/m15/ub/regular/stamp/gray.png', bounds:bounds2},
+	{name:'Gold Holo Stamp', src:'/img/frames/m15/ub/regular/stamp/gold.png', bounds:bounds2}
 ];
 //disables/enables the "Load Frame Version" button
 document.querySelector('#loadFrameVersion').disabled = false;
