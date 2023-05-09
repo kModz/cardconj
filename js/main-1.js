@@ -118,3 +118,17 @@ function bindInputs(query1, query2, checkbox = false) {
 		e2.oninput = (event) => {e1.value = e2.value;}
 	}
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+	document.body.dispatchEvent(new Event('doCreate'));
+})
+
+document.onkeyup = function(e) {
+	if (document.activeElement === document.getElementById('text-editor')) {
+		if (e.ctrlKey && e.which == 73) {
+			toggleTextTag('i');
+
+			e.preventDefault();
+		}
+	}
+}

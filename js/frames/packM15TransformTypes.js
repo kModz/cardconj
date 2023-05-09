@@ -2,6 +2,7 @@
 var bounds = {x:0.0594, y:0.0505, width:0.0734, height:0.0524};
 //defines available frames
 availableFrames = [
+	{name:'Up Arrow', src:'/img/frames/m15/transform/icons/default.png', bounds:bounds},
 	{name:'Sun', src:'/img/frames/m15/transform/icons/sun.svg', bounds:bounds},
 	{name:'Crescent Moon', src:'/img/frames/m15/transform/icons/moon.svg', bounds:bounds},
 	{name:'Full Moon', src:'/img/frames/m15/transform/icons/fullmoon.svg', bounds:bounds},
@@ -12,7 +13,8 @@ availableFrames = [
 	{name:'Planeswalker Spark', src:'/img/frames/m15/transform/icons/planeswalker.svg', bounds:bounds},
 	{name:'Lesson', src:'/img/frames/m15/transform/icons/lesson.svg', bounds:bounds},
 	{name:'Closed Fan', src:'/img/frames/m15/transform/icons/fanClosed.svg', bounds:bounds},
-	{name:'Open Fan', src:'/img/frames/m15/transform/icons/fanOpen.svg', bounds:bounds}
+	{name:'Open Fan', src:'/img/frames/m15/transform/icons/fanOpen.svg', bounds:bounds},
+	{name:'Hammer', src:'/img/frames/m15/transform/icons/hammer.png', bounds:bounds}
 ];
 //disables/enables the "Load Frame Version" button
 document.querySelector('#loadFrameVersion').disabled = true;

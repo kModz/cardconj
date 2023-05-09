@@ -1,5 +1,5 @@
 //Create objects for common properties across available frames
-var masks = [{src:'/img/frames/m15/regular/m15MaskPinline.png', name:'Pinline'}, {src:'/img/frames/m15/regular/m15MaskTitle.png', name:'Title'}, {src:'/img/frames/m15/regular/m15MaskType.png', name:'Type'}, {src:'/img/frames/m15/regular/m15MaskRules.png', name:'Rules'}, {src:'/img/frames/m15/regular/m15MaskFrame.png', name:'Frame'}, {src:'/img/frames/m15/regular/m15MaskBorder.png', name:'Border'}];
+var masks = [{src:'/img/frames/m15/regular/m15MaskPinlineSuper.png', name:'Pinline'}, {src:'/img/frames/m15/regular/m15MaskTitle.png', name:'Title'}, {src:'/img/frames/m15/regular/m15MaskType.png', name:'Type'}, {src:'/img/frames/m15/regular/m15MaskRules.png', name:'Rules'}, {src:'/img/frames/m15/regular/m15MaskFrame.png', name:'Frame'}, {src:'/img/frames/m15/regular/m15MaskBorder.png', name:'Border'}];
 var bounds = {x:0.7573, y:0.8848, width:0.188, height:0.0733};
 //defines available frames
 availableFrames = [
@@ -11,6 +11,12 @@ availableFrames = [
 	{name:'Multicolored Frame', src:'/img/frames/m15/boxTopper/m15BoxTopperFrameM.png', masks:masks},
 	{name:'Artifact Frame', src:'/img/frames/m15/boxTopper/m15BoxTopperFrameA.png', masks:masks},
 	{name:'Land Frame', src:'/img/frames/m15/boxTopper/m15BoxTopperFrameL.png', masks:masks},
+	{name:'White Land Frame', src:'/img/frames/m15/boxTopper/m15BoxTopperFrameWL.png', masks:masks},
+	{name:'Blue Land Frame', src:'/img/frames/m15/boxTopper/m15BoxTopperFrameUL.png', masks:masks},
+	{name:'Black Land Frame', src:'/img/frames/m15/boxTopper/m15BoxTopperFrameBL.png', masks:masks},
+	{name:'Red Land Frame', src:'/img/frames/m15/boxTopper/m15BoxTopperFrameRL.png', masks:masks},
+	{name:'Green Land Frame', src:'/img/frames/m15/boxTopper/m15BoxTopperFrameGL.png', masks:masks},
+	{name:'Multicolored Land Frame', src:'/img/frames/m15/boxTopper/m15BoxTopperFrameML.png', masks:masks},
 	{name:'Vehicle Frame', src:'/img/frames/m15/boxTopper/m15BoxTopperFrameV.png', masks:masks},
 	{name:'Colorless Frame', src:'/img/frames/m15/boxTopper/c.png', masks:masks},
 	{name:'White Power/Toughness', src:'/img/frames/m15/regular/m15PTW.png', bounds:bounds},
@@ -38,7 +44,13 @@ availableFrames = [
 	{name:'Green Snow Frame', src:'/img/frames/extended/regular/snow/g.png', masks:masks},
 	{name:'Multicolored Snow Frame', src:'/img/frames/extended/regular/snow/m.png', masks:masks},
 	{name:'Artifact Snow Frame', src:'/img/frames/extended/regular/snow/a.png', masks:masks},
-	{name:'Land Snow Frame', src:'/img/frames/extended/regular/snow/l.png', masks:masks}
+	{name:'Land Snow Frame', src:'/img/frames/extended/regular/snow/l.png', masks:masks},
+	{name:'White Land Snow Frame', src:'/img/frames/extended/regular/snow/wl.png', masks:masks},
+	{name:'Blue Land Snow Frame', src:'/img/frames/extended/regular/snow/ul.png', masks:masks},
+	{name:'Black Land Snow Frame', src:'/img/frames/extended/regular/snow/bl.png', masks:masks},
+	{name:'Red Land Snow Frame', src:'/img/frames/extended/regular/snow/rl.png', masks:masks},
+	{name:'Green Land Snow Frame', src:'/img/frames/extended/regular/snow/gl.png', masks:masks},
+	{name:'Multicolored Land Snow Frame', src:'/img/frames/extended/regular/snow/ml.png', masks:masks},
 ];
 //disables/enables the "Load Frame Version" button
 document.querySelector('#loadFrameVersion').disabled = false;
