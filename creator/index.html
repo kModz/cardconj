@@ -140,7 +140,7 @@
 							</div>
 							<h5 class='input-description margin-bottom'>Automatically load Frame Version when loading Frame Packs</h5>
 							<label class='checkbox-container input'>Auto load
-								<input id='autoLoadFrameVersion' type='checkbox' onchange='autoLoadFrameVersion();' checked>
+								<input id='autoLoadFrameVersion' type='checkbox' onchange='autoLoadFrameVersion();'>
 								<span class='checkmark'></span>
 							</label>
 						</div>
@@ -194,7 +194,7 @@
 							</label>
 							<h5 class='input-description margin-bottom'>Highlight transparencies in card</h5>
 							<label class='checkbox-container input'>Transparencies
-								<input id='highlight-transparencies' type='checkbox' onchange='toggleCardBackgroundColor(this.checked);'>
+								<input id='highlight-transparencies' type='checkbox' checked onchange='toggleCardBackgroundColor(this.checked);'>
 								<span class='checkmark'></span>
 							</label>
 						</div>
@@ -295,7 +295,7 @@
 						            <input type='file' multiple accept='.png, .svg, .jpg, .jpeg, .bmp' placeholder='File Upload' class='input' oninput='uploadFiles(event.target.files, uploadArt, document.querySelector("#art-update-autofit").checked ? "autoFit" : "");' data-dropFunction='uploadArt' data-otherParams='autoFit'>
 						        </div>
 						        <div>
-									<input type='url' placeholder='Via URL' class='input' onchange='uploadArt(this.value, document.querySelector("#art-update-autofit").checked ? "autoFit" : "");'>
+									<input type='url' placeholder='Via URL' class='input' onchange='imageURL(this.value, uploadArt, document.querySelector("#art-update-autofit").checked ? "autoFit" : "");'>
 									<h5 class='input-description margin-bottom'></h5>
 										<label class='checkbox-container input'>Autofit when setting art
 											<input id='art-update-autofit' type='checkbox' onchange='setAutofit();'>
@@ -354,7 +354,7 @@
 								<input id='set-symbol-rarity' type='text' placeholder='Rarity' class='input' onchange='fetchSetSymbol();'>
 							</div>
 							<label class='checkbox-container input margin-bottom'>Fetch from Gatherer
-								<input id='fetchSetSymbolFromGatherer' type='checkbox' checked onchange='fetchSetSymbol();'>
+								<input id='fetchSetSymbolFromGatherer' type='checkbox' onchange='fetchSetSymbol();'>
 								<span class='checkmark'></span>
 							</label>
 							<h5 class='collapsible collapsed padding input-description' onclick='toggleCollapse(event);'>
