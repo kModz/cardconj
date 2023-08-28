@@ -95,7 +95,7 @@
 		</div>
 		<!-- Regular stuff -->
 		<div class='creator-grid margin-bottom-large'>
-			<canvas class='creator-canvas box-shadow' id='previewCanvas' width='750' height='1050'></canvas>
+			<canvas class='creator-canvas box-shadow' id='previewCanvas' width='1005' height='1407'></canvas>
 			<div class='creator-menu box-shadow'>
 				<div id='creator-menu-tabs' class='creator-menu-tabs'>
 					<h3 class='selectable readable-background selected' onclick='toggleCreatorTabs(event, "frame")'>Frame</h3>
@@ -277,6 +277,12 @@
 								</div>
 							</div>
 						</div>
+						<div class='readable-background padding margin-bottom'>
+							<label class='checkbox-container input'>Hide reminder text
+								<input id='hide-reminder-text' type='checkbox' onchange='textEdited();'>
+								<span class='checkmark'></span>
+							</label>
+						</div>
 						<div class='readable-background padding'>
 							<h5 class='padding input-description'>Add a textbox to your card</h5>
 							<div class='padding input-grid'>
@@ -304,7 +310,7 @@
 								</div>
 							</div>
 							<h5 class='margin-bottom padding input-description'>Or enter a card name</h5>
-							<input id='art-name' type='text' placeholder='Enter Card Name' class='input margin-bottom' onchange='fetchScryfallData(this.value, artFromScryfall, true);'>
+							<input id='art-name' type='text' placeholder='Enter Card Name' class='input margin-bottom' onchange="fetchScryfallData(this.value, artFromScryfall, 'art');">
 							<h5 class='padding margin-bottom input-description'>Select a specific card art to load</h5>
 							<select class='input margin-bottom' id='art-index' onchange='changeArtIndex();'></select>
 							<h5 class='margin-bottom padding input-description'>And credit the artist</h5>
@@ -600,11 +606,15 @@
 					<div id='creator-menu-import' class='hidden'>
 						<div class='readable-background margin-bottom padding'>
 							<h5 class='padding margin-bottom input-description'>Import a real card by name</h5>
-							<input id='import-name' class='input margin-bottom' type='text' onchange='fetchScryfallData(this.value, importCard);' placeholder='Enter Card Name'>
+							<input id='import-name' class='input margin-bottom' type='text' onchange='importChanged();' placeholder='Enter Card Name'>
+							<label class='checkbox-container input margin-bottom'>Include all unique prints as options
+								<input id='importAllPrints' type='checkbox' onchange="importChanged();">
+								<span class='checkmark'></span>
+							</label>
 							<h5 class='padding margin-bottom input-description'>Select a specific card to import</h5>
 							<select class='input margin-bottom' id='import-index' onchange='changeCardIndex();'></select>
 							<h5 class='padding input-description'>Select a language for card imports (not all languages will always be available)</h5>
-							<select class='input' id='import-language' onchange='fetchScryfallData(document.querySelector("#import-name").value, importCard);'>
+							<select class='input' id='import-language' onchange='importChanged();'>
 								<option value="en">English</option>
 								<option value="es">Spanish</option>
 								<option value="fr">French</option>
@@ -672,9 +682,15 @@
 							<option value="M15ExtendedArtShort">Extended Art (Shorter Textbox)</option>
 							<option value="UB">Universes Beyond</option>
 							<option value="Etched">Etched</option>
+							<option value="Borderless">Borderless (Alt)</option>
 							<option value="Praetors">Phyrexian</option>
 							<option value="8th">8th Edition</option>
 							<option value="Seventh">Seventh Edition</option>
+
+							<option disabled>Custom frames</option>
+							<option value="Circuit">Circuit</option>
+							<option value="M15Eighth">M15-Eighth</option>
+							<option value="M15EighthUB">M15-Eighth Universes Beyond</option>
 						</select>
 						<!-- <button class='input' onclick='autoFrame("M15");'>M15</button>
 						<button class='input' onclick='autoFrame("UB");'>Universes Beyond</button> -->
@@ -684,7 +700,12 @@
 					<h3 class='download padding' onclick='downloadCard();'>Download your card</h3>
 					<h5 onclick='downloadCard(false, true);' id='downloadJpg' href='' target='_blank' class='padding download input-description' style='text-align: left;'>Click here to download as JPEG</h5>
 					<h5 onclick='downloadCard(true);' id='downloadAlt' href='' target='_blank' class='padding download input-description' style='text-align: left;'>Click here for an alternative download</h5>
+					<!-- <label class='checkbox-container input margin-bottom'>800 DPI
+						<input id='high-res' type='checkbox' onchange='toggleHighRes();'>
+						<span class='checkmark'></span>
+					</label> -->
 				</div>
+					
 			</div>
 		</div>
 		<!--

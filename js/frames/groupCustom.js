@@ -7,8 +7,16 @@ loadFramePacks([
 	{name:'Textless Seventh', value:'SeventhTextless'},
 	{name:'Seventh Edition Planeswalkers', value:'PlaneswalkerSeventh'},
 	{name:'Seventh Edition Sagas', value:'OldSaga'},
+	{name:'Seventh Edition Snow Lands', value:'SeventhSnowLands'},
 	{name:'Floating Old Border', value:'OldFloating'},
 	{name:'Floating Old Border (Short)', value:'OldFloatingShort'},
+
+	{name:'Modern M15 Eighth Edition Style', value:'disabled'},
+	{name:'Regular', value:'M15Eighth'},
+	{name:'Nyx', value:'M15EighthNyx'},
+	{name:'Snow', value:'M15EighthSnow'},
+	{name:'Universes Beyond', value:'M15EighthUB'},
+
 	{name:'Classicshifted Series', value:'disabled'},
 	{name:'Classicshifted', value:'Classicshifted'},
 	{name:'Classicshifted Lands', value:'ClassicshiftedLands'},
@@ -18,6 +26,7 @@ loadFramePacks([
 	{name:'Classicshifted MDFC Addons', value:'ClassicshiftedDFC'},
 	{name:'Classicshifted Transform Addons', value:'ClassicshiftedTransform'},
 	{name:'Color Identity Pips', value:'ClassicshiftedCIPips'},
+
 	{name:'Showcase Frame Varients', value:'disabled'},
 	{name:'Short Neon (NEO)', value:'NEONeonShort'},
 	{name:'Colored Golden Age (SNC)', value:'SNCGildedColored'},
@@ -26,8 +35,10 @@ loadFramePacks([
 	{name:'Horizontal Japanese Mystical Archive (STA)', value:'MysticalArchiveJPHorizontal'},
 	{name:'Extended Art Invocations', value:'AKHInvocationExtended'},
 	{name:'Textless Inventions', value:'TextlessInvention'},
+
 	{name:'Custom Addons', value:'disabled'},
 	{name:'Brawl Legend Crowns', value:'Brawl'},
+
 	{name:'Custom Community Frames', value:'disabled'},
 	{name:'Cartoony - Sheepwave', value:'Cartoony'},
 	{name:'Neon - Elry', value:'CustomNeon'},
@@ -35,5 +46,6 @@ loadFramePacks([
 	{name:'Kaldheim, Fullart - @feuer_ameise', value:'FeuerAmeiseKaldheim'},
 	{name:'Celid\'s Asap', value:'CustomCelidAsap'},
 	{name:'Magrao\'s Kaldheim', value:'CustomMagraoKaldheim'},
-	{name:'Pokemon', value:'Pokemon'}
+	{name:'Pokemon', value:'Pokemon'},
+	{name:'Circuit', value:'Circuit'}
 ])
