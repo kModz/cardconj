@@ -123,11 +123,13 @@
 									<option value='DFC'>Transform</option>
 									<option disabled>Special Frames</option>
 									<option value='Showcase-5'>Showcase Frames</option>
+									<option value='UniversesBeyond'>Universes Beyond</option>
 									<option value='Promo-2'>Promos (Tall Art)</option>
 									<option value='Textless-4'>Textless/Fullart</option>
 									<option disabled>Other Frames</option>
 									<option value='Custom'>Custom</option>
 									<option value='Misc-2'>Old/Misc</option>
+									<option value='Accurate'>Accurate Frames</option>
 									<option value='Margin'>1/8th Inch Margin</option>
 									<option disabled>Other Games</option>
 									<option value='FleshAndBlood'>Flesh and Blood</option>
@@ -329,6 +331,13 @@
 							<div class='input-grid'>
 								<button class='input' onclick='autoFitArt();'>Auto Fit Art</button>
 							</div>
+						</div>
+						<div class='readable-background padding margin-bottom'>
+							<h5 class='input-description margin-bottom'>Make the art grayscale</h5>
+							<label class='checkbox-container input'>Grayscale
+								<input id='grayscale-art' type='checkbox' onchange='drawCard();'>
+								<span class='checkmark'></span>
+							</label>
 						</div>
 						<div class='readable-background padding margin-bottom'>
 							<h5 class='padding margin-bottom input-description'>Clears the art, making it blank</h5>
@@ -686,6 +695,11 @@
 							<option value="Praetors">Phyrexian</option>
 							<option value="8th">8th Edition</option>
 							<option value="Seventh">Seventh Edition</option>
+
+							<option disabled>Redone frames</option>
+							<option value="M15RegularNew">Regular (Accurate)</option>
+							<option value="FullArtNew">Full art (Accurate)</option>
+							<option value="UBNew">Universes Beyond (Accurate)</option>
 
 							<option disabled>Custom frames</option>
 							<option value="Circuit">Circuit</option>
