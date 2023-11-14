@@ -2,6 +2,7 @@
 var masks = [{src:'/img/frames/m15/regular/m15MaskPinline.png', name:'Pinline'}, {src:'/img/frames/m15/regular/m15MaskTitle.png', name:'Title'}, {src:'/img/frames/m15/regular/m15MaskType.png', name:'Type'}, {src:'/img/frames/m15/regular/m15MaskRules.png', name:'Rules'}, {src:'/img/frames/m15/regular/m15MaskFrame.png', name:'Frame'}, {src:'/img/frames/m15/regular/m15MaskBorder.png', name:'Border'}];
 var bounds = {x:1555/2010, y:2492/2814, width:353/2010, height:179/2814};
 var crownBounds = {x:0, y:0, width:1, height:341/2814};
+var stampBounds = {x:873/2010, y:2539/2814, width:264/2010, height:131/2814};
 //defines available frames
 availableFrames = [
 	{name:'White Frame', src:'/img/frames/doubleFeature/w.png', masks:masks},
@@ -18,7 +19,7 @@ availableFrames = [
 	{name:'Black Power/Toughness', src:'/img/frames/doubleFeature/pt/b.png', bounds:bounds},
 	{name:'Red Power/Toughness', src:'/img/frames/doubleFeature/pt/r.png', bounds:bounds},
 	{name:'Green Power/Toughness', src:'/img/frames/doubleFeature/pt/g.png', bounds:bounds},
-	{name:'Multicolored Power/Toughness', src:'/img/frames/doubleFeature/pt/m.png', bounds:bounds},
+	{name:'Green Power/Toughness', src:'/img/frames/doubleFeature/pt/m.png', bounds:bounds},
 	{name:'Artifact Power/Toughness', src:'/img/frames/doubleFeature/pt/a.png', bounds:bounds},
 	{name:'Land Power/Toughness', src:'/img/frames/doubleFeature/pt/l.png', bounds:bounds},
 
@@ -36,7 +37,15 @@ availableFrames = [
 	{name:'Green Legend Crown', src:'/img/frames/doubleFeature/crowns/g.png', bounds:crownBounds},
 	{name:'Multicolored Legend Crown', src:'/img/frames/doubleFeature/crowns/m.png', bounds:crownBounds},
 	{name:'Artifact Legend Crown', src:'/img/frames/doubleFeature/crowns/a.png', bounds:crownBounds},
-	{name:'Land Legend Crown', src:'/img/frames/doubleFeature/crowns/l.png', bounds:crownBounds}
+	{name:'Land Legend Crown', src:'/img/frames/doubleFeature/crowns/l.png', bounds:crownBounds},
+
+	{name:'Holo Stamp', src:'/img/frames/doubleFeature/stamps/stamp.png', bounds:stampBounds},
+	{name:'White Land Holo Stamp', src:'/img/frames/doubleFeature/stamps/w.png', bounds:stampBounds},
+	{name:'Blue Land Holo Stamp', src:'/img/frames/doubleFeature/stamps/u.png', bounds:stampBounds},
+	{name:'Black Land Holo Stamp', src:'/img/frames/doubleFeature/stamps/b.png', bounds:stampBounds},
+	{name:'Red Land Holo Stamp', src:'/img/frames/doubleFeature/stamps/r.png', bounds:stampBounds},
+	{name:'Green Land Holo Stamp', src:'/img/frames/doubleFeature/stamps/g.png', bounds:stampBounds},
+	{name:'Multicolored Land Holo Stamp', src:'/img/frames/doubleFeature/stamps/m.png', bounds:stampBounds}
 ];
 //disables/enables the "Load Frame Version" button
 document.querySelector('#loadFrameVersion').disabled = false;
@@ -47,7 +56,7 @@ document.querySelector('#loadFrameVersion').onclick = async function() {
 	//sets card version
 	card.version = 'm15DBL';
 	//art bounds
-	card.artBounds = {x:0.0767, y:0.1129, width:0.8476, height:0.4429};
+	card.artBounds = {x:155/2010, y:319/2814, width:1700/2010, height:1242/2814};
 	autoFitArt();
 	//set symbol bounds
 	card.setSymbolBounds = {x:0.9213, y:0.5910, width:0.12, height:0.0410, vertical:'center', horizontal: 'right'};
