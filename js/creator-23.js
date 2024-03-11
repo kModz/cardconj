@@ -3414,6 +3414,8 @@ function writeText(textObject, targetContext) {
 	}
 	if (card.version == 'pokemon') {
 		rawText = rawText.replace(/{flavor}/g, '{oldflavor}{fontsize-20}{fontgillsansbolditalic}');
+	} else if (card.version == 'dossier') {
+		rawText = rawText.replace(/{flavor}(.*)/g, function(v) { return '{/indent}{lns}{bar}{lns}{fixtextalign}' + v.replace(/{flavor}/g, '').toUpperCase(); });
 	} else if (!card.showsFlavorBar) {
 		rawText = rawText.replace(/{flavor}/g, '{oldflavor}');
 	}
@@ -3543,7 +3545,7 @@ function writeText(textObject, targetContext) {
 					}
 					lineContext.drawImage(getManaSymbol(barImageName).image, canvasMargin + (textWidth - barWidth) / 2, canvasMargin + barDistance * textSize, barWidth, barHeight);
 				} else if (possibleCode == 'i') {
-					if (textFont == 'gilllsans') {
+					if (textFont == 'gilllsans' || textFont == 'neosans') {
 						textFontExtension = 'italic';
 					} else if (textFont == 'mplantin') {
 						textFontExtension = 'i';
@@ -4686,15 +4688,16 @@ function changeCardIndex() {
 	if (card.text.nickname) {card.text.nickname.text = cardToImport.flavor_name || '';}
 	if (card.text.mana) {card.text.mana.text = cardToImport.mana_cost || '';}
 	if (card.text.type) {card.text.type.text = langFontCode + cardToImport.type_line || '';}
+
+	var italicExemptions = ['Boast', 'Cycling', 'Visit', 'Prize', 'I', 'II', 'III', 'IV', 'I, II', 'II, III', 'III, IV', 'I, II, III', 'II, III, IV', 'I, II, III, IV', '• Khans', '• Dragons', '• Mirran', '• Phyrexian', 'Prototype', 'Companion', 'To solve', 'Solved'];
+	var rulesText = (cardToImport.oracle_text || '').replace(/(?:\((?:.*?)\)|[^"\n]+(?= — ))/g, function(a){
+	    if (italicExemptions.includes(a)) {return a;}
+	    return '{i}' + a + '{/i}';
+	});
+	rulesText = curlyQuotes(rulesText).replace(/{Q}/g, '{untap}').replace(/{\u221E}/g, "{inf}").replace(/• /g, '• {indent}');
+	rulesText = rulesText.replace('(If this card is your chosen companion, you may put it into your hand from outside the game for {3} any time you could cast a sorcery.)', '(If this card is your chosen companion, you may put it into your hand from outside the game for {3} as a sorcery.)')
+
 	if (card.text.rules) {
-		var italicExemptions = ['Boast', 'Cycling', 'Visit', 'Prize', 'I', 'II', 'III', 'IV', 'I, II', 'II, III', 'III, IV', 'I, II, III', 'II, III, IV', 'I, II, III, IV', '• Khans', '• Dragons', '• Mirran', '• Phyrexian', 'Prototype', 'Companion'];
-		var rulesText = (cardToImport.oracle_text || '').replace(/(?:\((?:.*?)\)|[^"\n]+(?= — ))/g, function(a){
-		    if (italicExemptions.includes(a)) {return a;}
-		    return '{i}' + a + '{/i}';
-		});
-		rulesText = curlyQuotes(rulesText).replace(/{Q}/g, '{untap}').replace(/{\u221E}/g, "{inf}").replace(/• /g, '• {indent}');
-		rulesText = rulesText.replace('(If this card is your chosen companion, you may put it into your hand from outside the game for {3} any time you could cast a sorcery.)', '(If this card is your chosen companion, you may put it into your hand from outside the game for {3} as a sorcery.)')
-		
 		if (card.version == 'pokemon') {
 			if (cardToImport.type_line.toLowerCase().includes('creature')) {
 				card.text.rules.text = langFontCode + rulesText;
@@ -4773,6 +4776,9 @@ function changeCardIndex() {
 
 			
 		}
+	} else if (card.text.case) {
+		rulesText = rulesText.replace(/(\r\n|\r|\n)/g, '//{bar}//');
+		card.text.case.text = langFontCode + rulesText;
 	}
 
 	if (card.text.pt) {

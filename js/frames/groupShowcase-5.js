@@ -1,5 +1,7 @@
 loadFramePacks([
 	{name:'Set Showcase Frames (Chronological)', value:'disabled'},
+	{name:'Pip-Boy (PIP)', value:'Pipboy'},
+	{name:'Dossier (MKM)', value:'Dossier'},
 	{name:'Scrolls of Middle-earth (LTR)', value:'Scroll'},
 	{name:'Enchanting Tales (WOT)', value:'EnchantingTales'},
 	{name:'Eldraine Storybooks: Adventures (WOE)', value:'StorybookWOE'},
@@ -9,7 +11,7 @@ loadFramePacks([
 	{name:'Ixalan Coin (MOM)', value:'IxalanCoin'},
 	{name:'Tarkir Sketch (MOM)', value:'Tarkir'},
 	{name:'Ikoria Crystal (MOM)', value:'Crystal'},
-	{name:'Ravnica Architecture (MOM)', value:'Ravnica'},
+	{name:'Ravnica City (MOM)', value:'Ravnica'},
 	{name:'Oil Slick (ONE)', value:'OilSlick'},
 	{name:'Stained Glass (DMU)', value:'DMUStainedGlass'},
 	{name:'Golden Age (SNC)', value:'SNCGilded'},
